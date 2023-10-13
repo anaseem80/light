@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 3rem !important;
+        }
+        @media(max-width:767px){
+            h1{
+                font-size: 1.5rem !important;
+            }
+            h1 img{
+                width: 35px;
+            }
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 10px;
+            /* font-family: 'Rubik' !important; */
+            background-color: #383A59 !important;
+        }
+        #go-button {
+            background: yellow;
+            border: 2px solid yellow;
+            text-align: center;
+            height: 140px;
+            width: 140px;
+            cursor: pointer;
+            transition: background 0.5s;
+        }
+        #go-button:hover{
+            color: #fff;
+        }
+        #email-icon, #linkedin-icon, #youtube-icon {
+            margin: 7px;
+            cursor: pointer;
+        }
+        #sentences p{
+            display: none;
+            color: #fff;
+            font-size: 20px;
+            font-style: italic;
+            margin-bottom: 0;
+        }
+        #sentences p:before{
+            content: "\f0eb";
+            font-family: "Font Awesome 5 Free";
+            color: #ffc107;
+            margin-right: 8px;
+        }
+        #light{
+            display: none;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="text-light mb-5">Take a short <span class="d-block mt-2"><img src="images/no-phone.png" class="me-2" width="50" alt="no_phone">screen break</span></h1>
+        <button type="button" id="go-button" class="rounded-circle fs-1 mt-5">Go!</button>
+        <div id="sentences" class="my-5">
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Nullam in leo eget erat faucibus viverra.</p>
+                <p>Fusce ac justo nec justo vulputate iaculis.</p>
+                <p>Vestibulum eget nunc eget nisi pharetra laoreet.</p>
+                <p>Curabitur in sem nec libero pulvinar vehicula.</p>
+                <p>Proin eu justo non felis volutpat pulvinar.</p>
+                <p>Sed interdum justo vel nunc fringilla, vel consequat libero rhoncus.</p>
+                <p>Ut ac libero non dolor aliquam posuere.</p>
+                <p>In non metus nec sapien feugiat volutpat.</p>
+                <p>Maecenas id nulla a urna varius fringilla.</p>
+                <p>Vivamus id felis at ipsum volutpat consectetur.</p>
+                <p>Suspendisse non metus non orci laoreet posuere.</p>
+                <p>Phasellus hendrerit neque nec dolor lacinia, sit amet ultrices arcu euismod.</p>
+                <p>Nam euismod tortor in purus mattis, sit amet volutpat nisi tincidunt.</p>
+                <p>Quisque in justo vel libero tristique eleifend.</p>
+                <p>Curabitur vestibulum lectus nec neque ullamcorper, sit amet tincidunt odio fermentum.</p>
+                <p>Aliquam vel elit sit amet risus laoreet bibendum.</p>
+                <p>Fusce eu libero ac libero tincidunt sollicitudin.</p>
+                <p>Sed dapibus justo at efficitur fermentum.</p>
+                <p>Nulla facilisi. Sed id odio ac ligula volutpat pharetra.</p>
+                <p>Maecenas id libero nec arcu tincidunt venenatis.</p>
+                <p>Aenean in odio sit amet lectus euismod congue.</p>
+                <p>Vivamus ac nunc nec arcu congue facilisis.</p>
+                <p>Proin vel ante vel nunc vulputate bibendum.</p>
+                <p>Ut ac neque in velit ultrices auctor.</p>
+                <p>Nam eu dolor eu orci rhoncus vehicula.</p>
+                <p>Integer a elit vel justo malesuada cursus.</p>
+                <p>Etiam vel quam nec metus posuere volutpat.</p>
+                <p>Fusce eget arcu a quam varius egestas.</p>
+                <p>Suspendisse in elit vel nisi consequat rhoncus.</p>
+                <p>Nunc euismod metus ac justo cursus, eget condimentum felis rhoncus.</p>
+                <p>Curabitur sit amet libero eget metus auctor vestibulum.</p>
+                <p>Sed id libero nec justo vulputate vehicula.</p>
+                <p>Morbi in libero in arcu venenatis tristique.</p>
+                <p>Quisque non arcu sed ligula tristique bibendum.</p>
+                <p>Vestibulum at arcu in libero sollicitudin convallis.</p>
+                <p>Duis a justo a libero tincidunt pharetra.</p>
+                <p>Nunc eget libero nec lectus tristique iaculis.</p>
+                <p>Nullam nec justo nec libero congue vehicula.</p>
+                <p>In eget libero nec libero volutpat vehicula.</p>
+                <p>Phasellus in velit eu lectus facilisis fermentum.</p>
+                <p>Aenean eu justo eu purus vehicula efficitur.</p>
+                <p>Vivamus nec leo sed ligula vulputate rhoncus.</p>
+                <p>Sed vitae justo in libero mattis fermentum.</p>
+                <p>Quisque non libero in libero fringilla sollicitudin.</p>
+                <p>Proin nec metus nec justo tincidunt auctor.</p>
+                <p>Nulla ac arcu nec libero condimentum venenatis.</p>
+                <p>Integer eu elit nec libero posuere pharetra.</p>
+                <p>Nam vel justo nec libero ultrices fermentum.</p>
+                <p>Fusce vel libero in libero bibendum tincidunt.</p>                
+            </div>
+        </div>
+        <div class="">
+            <a id="email-icon" href="mailto:example@example.com" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"><img src="images/Email.png" width="40" alt="email-icon"></a>
+            <a id="linkedin-icon" href="https://www.linkedin.com" target="_blank"><img src="images/Linkedin.png" width="40" alt="linkedin-icon"></a>
+            <a id="youtube-icon" href="https://www.youtube.com" target="_blank"><img src="images/Youtube.png" width="40" alt="youtube-icon"></a>
+        </div>
+        <audio id="click-sound" src="audio/click.mp3"></audio>
+    </div>
+
+    <script>
+        const goButton = document.getElementById("go-button");
+        const sentences = document.getElementById("sentences");
+        const clickSound = document.getElementById("click-sound");
+
+        let currentSentenceIndex = 0;
+
+        // Function to toggle the Go button's color
+        function toggleButtonColor() {
+            const colors = ["yellow", "lightgreen", "lightblue", "darkblue"];
+            let currentIndex = colors.indexOf(goButton.style.backgroundColor);
+            currentIndex = (currentIndex + 1) % colors.length;
+            goButton.style.backgroundColor = colors[currentIndex];
+        }
+
+        // Function to handle Go button click
+        function handleGoButtonClick() {
+            toggleButtonColor();
+            clickSound.play();
+            // light.style.display = 'block'
+            const sentenceList = sentences.querySelectorAll("p");
+            sentenceList[currentSentenceIndex].style.display = "none";
+            currentSentenceIndex = (currentSentenceIndex + 1) % sentenceList.length;
+            sentenceList[currentSentenceIndex].style.display = "block";
+        }
+
+        goButton.addEventListener("click", handleGoButtonClick);
+
+        // Change button color on hover
+        goButton.addEventListener("mouseenter", () => {
+            goButton.style.backgroundColor = "#59A8D9";
+        });
+
+        goButton.addEventListener("mouseleave", toggleButtonColor);
+    </script>
+    <script src="https://kit.fontawesome.com/a1a75d5546.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+</body>
+</html>
