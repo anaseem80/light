@@ -25,16 +25,25 @@
             background-color: #383A59 !important;
         }
         #go-button {
-            background: yellow;
+            background: lightblue;
             border: 2px solid yellow;
             text-align: center;
             height: 140px;
             width: 140px;
             cursor: pointer;
             transition: background 0.5s;
+            animation: border-color-animation 3s infinite;
         }
+
+        @keyframes border-color-animation {
+            0% { border-color: yellow; }
+            50% { border-color: darkblue; }
+            100% { border-color: yellow; }
+        }
+
         #go-button:hover{
-            color: #fff;
+            background: #59A8D9;
+            border-color: darkblue;
         }
         #email-icon, #linkedin-icon, #youtube-icon {
             margin: 7px;
@@ -53,8 +62,26 @@
             color: #ffc107;
             margin-right: 8px;
         }
+        #lightbulb-icon {
+            display: block;
+            color: yellow;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        #explanatory-text {
+            display: block;
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
         #light{
             display: none;
+        }
+        .icons img{
+            transition: 0.3s;
+        }
+        .icons img:hover{
+            transform: translateY(-5px);
         }
     </style>
     <link rel="shortcut icon" href="images/no-phone.png" type="image/x-icon">
@@ -65,9 +92,13 @@
 </head>
 <body>
     <div class="text-center">
+        <div class="mb-5">
+            <i id="lightbulb-icon" class="fas fa-lightbulb"></i>
+            <p id="explanatory-text" c>Click on the Go button to see what happens.</p>
+        </div>
         <h1 class="text-light mb-5">Take a short <span class="d-block mt-2"><img src="images/no-phone.png" class="me-2" width="50" alt="no_phone">screen break</span></h1>
-        <button type="button" id="go-button" class="rounded-circle fs-1 mt-5">Go!</button>
-        <div id="sentences" class="my-5">
+        <button type="button" id="go-button" class="rounded-circle fs-1 mb-5">Go!</button>
+        <div id="sentences">
             <div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <p>Nullam in leo eget erat faucibus viverra.</p>
@@ -118,10 +149,10 @@
                 <p>Nulla ac arcu nec libero condimentum venenatis.</p>
                 <p>Integer eu elit nec libero posuere pharetra.</p>
                 <p>Nam vel justo nec libero ultrices fermentum.</p>
-                <p>Fusce vel libero in libero bibendum tincidunt.</p>                
+                <p>Fusce vel libero in libero bibendum tincidunt.</p>             
             </div>
         </div>
-        <div class="">
+        <div class="mt-5 icons">
             <a id="email-icon" href="mailto:example@example.com" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"><img src="images/Email.png" width="40" alt="email-icon"></a>
             <a id="linkedin-icon" href="https://www.linkedin.com" target="_blank"><img src="images/Linkedin.png" width="40" alt="linkedin-icon"></a>
             <a id="youtube-icon" href="https://www.youtube.com" target="_blank"><img src="images/Youtube.png" width="40" alt="youtube-icon"></a>
@@ -148,7 +179,6 @@
         function handleGoButtonClick() {
             toggleButtonColor();
             clickSound.play();
-            // light.style.display = 'block'
             const sentenceList = sentences.querySelectorAll("p");
             sentenceList[currentSentenceIndex].style.display = "none";
             currentSentenceIndex = (currentSentenceIndex + 1) % sentenceList.length;
@@ -160,9 +190,13 @@
         // Change button color on hover
         goButton.addEventListener("mouseenter", () => {
             goButton.style.backgroundColor = "#59A8D9";
+            goButton.style.borderColor = "darkblue";
         });
 
-        goButton.addEventListener("mouseleave", toggleButtonColor);
+        goButton.addEventListener("mouseleave", () => {
+            toggleButtonColor();
+            goButton.style.borderColor = "yellow";
+        });
     </script>
     <script src="https://kit.fontawesome.com/a1a75d5546.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
